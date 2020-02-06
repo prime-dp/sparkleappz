@@ -243,17 +243,13 @@ a:hover {
 .clients-section {
   padding: 75px 0;
   background-color: #ebefe6; }
-  .clients-section .clients-carousel-wrap .owl-prev, .clients-section .clients-carousel-wrap .owl-next {
-    height: 1rem;
-    border: none;
-    outline: none;
-    background-color: transparent; }
-    .clients-section .clients-carousel-wrap .owl-prev:before, .clients-section .clients-carousel-wrap .owl-next:before {
-      display: inline-block;
-      font-family: 'FontAwesome';
-      position: absolute;
-      transform: translate(-50%, -50%); }
-  .clients-section .clients-carousel-wrap .owl-prev:before {
-    content: "\f053"; }
-  .clients-section .clients-carousel-wrap .owl-next:before {
-    content: "\f054"; }
+  .clients-section .custom-navs-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2%; }
+    .clients-section .custom-navs-wrap .custom-nav {
+      cursor: pointer;
+      display: inline-flex; }
+  .clients-section .clients-carousel-wrap {
+    width: 96%; }

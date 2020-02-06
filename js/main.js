@@ -15,13 +15,13 @@ $(document).ready(function() {
 
     $(".owl-carousel").owlCarousel({
         items: 5,
-        nav: true,
+        //nav: true,
         autoplay: true,
         loop: true,
         navText : ["",""],
-        navContainer: '.clients-carousel-wrap',
-        dots: false,
-        margin: 10
+        //navContainer: '.clients-carousel-wrap',
+        dots: false
+        //margin: 10
     });
 
     //анимация
@@ -33,6 +33,18 @@ $(document).ready(function() {
             live:         true
         }
     );
+
+    let owl = $('.owl-carousel');
+    owl.owlCarousel();
+    $('.customNextBtn').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+// Go to the previous item
+    $('.customPrevBtn').click(function() {
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        owl.trigger('prev.owl.carousel', [300]);
+    })
 
     wow.init();
 });
