@@ -17,9 +17,6 @@
 .about-section {
   padding: 60px 0;
   background-color: $background-sections-color;
-  .btn {
-    margin-top: 30px;
-  }
 }
 
 .help-section {
@@ -38,7 +35,7 @@
   padding: 0 50px;
 }
 
-.services-section {
+.services-section, .portfolio-section, .clients-section {
   padding: 75px 0;
 }
 
@@ -64,7 +61,6 @@
 }
 
 .clients-section {
-  padding: 75px 0;
   background-color: $background-sections-color;
   .custom-navs-wrap {
     display: flex;
@@ -78,5 +74,54 @@
   }
   .clients-carousel-wrap {
     width: 96%;
+  }
+}
+
+.portfolio-item-img-wrap {
+  transform: scale(1);
+  transition: ease .5s;
+}
+
+.portfolio-section {
+  .portfolio-item-caption {
+    transition: ease .5s;
+    padding: 10px 0;
+    position: absolute;
+    bottom: -10%;
+    width: 90%;
+    opacity: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.15);
+    transform: perspective(500px) rotateX(90deg);
+  }
+  .portfolio-item-wrap {
+    overflow: hidden;
+    box-shadow: $portfolio-box-shadow;
+    margin: 15px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &:hover {
+      .portfolio-item-caption {
+        opacity: 1;
+        bottom: 0;
+        width: 100%;
+        transform: perspective(500px) rotateX(0);
+        transition: ease .5s;
+      }
+      .portfolio-item-img-wrap {
+        transform: scale(.8);
+        transition: ease .5s;
+      }
+    }
+    &:after {
+
+    }
+  }
+  .filled-button {
+    .fa-long-arrow-alt-right {
+      font-size: .9em;
+      padding: 0 0 0 .6em;
+    }
   }
 }

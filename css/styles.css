@@ -83,10 +83,11 @@ a:hover {
 .title-caption-2 {
   font-size: 3.5rem; }
 
-.about-section .btn {
+.filled-button {
+  margin-top: 30px;
   color: white;
   padding: 10px 40px; }
-  .about-section .btn:hover {
+  .filled-button:hover {
     color: #0057ff;
     box-shadow: 0 0 30px -8px rgba(0, 0, 0, 0.4); }
 
@@ -126,6 +127,10 @@ a:hover {
 
 .services-description-caption {
   font-size: 1.4rem; }
+
+.portfolio-item-caption {
+  font-weight: 600;
+  font-size: 1.2rem; }
 
 .header-wrapper {
   padding: 15px 0;
@@ -206,8 +211,6 @@ a:hover {
 .about-section {
   padding: 60px 0;
   background-color: #ebefe6; }
-  .about-section .btn {
-    margin-top: 30px; }
 
 .help-section {
   background-image: url("../img/blue_img-2.png");
@@ -222,7 +225,7 @@ a:hover {
 .help-text-wrapper {
   padding: 0 50px; }
 
-.services-section {
+.services-section, .portfolio-section, .clients-section {
   padding: 75px 0; }
 
 .services-item {
@@ -241,7 +244,6 @@ a:hover {
   margin-left: 20px; }
 
 .clients-section {
-  padding: 75px 0;
   background-color: #ebefe6; }
   .clients-section .custom-navs-wrap {
     display: flex;
@@ -253,3 +255,39 @@ a:hover {
       display: inline-flex; }
   .clients-section .clients-carousel-wrap {
     width: 96%; }
+
+.portfolio-item-img-wrap {
+  transform: scale(1);
+  transition: ease .5s; }
+
+.portfolio-section .portfolio-item-caption {
+  transition: ease .5s;
+  padding: 10px 0;
+  position: absolute;
+  bottom: -10%;
+  width: 90%;
+  opacity: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.15);
+  transform: perspective(500px) rotateX(90deg); }
+
+.portfolio-section .portfolio-item-wrap {
+  overflow: hidden;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 15px 0;
+  position: relative;
+  display: flex;
+  justify-content: center; }
+  .portfolio-section .portfolio-item-wrap:hover .portfolio-item-caption {
+    opacity: 1;
+    bottom: 0;
+    width: 100%;
+    transform: perspective(500px) rotateX(0);
+    transition: ease .5s; }
+  .portfolio-section .portfolio-item-wrap:hover .portfolio-item-img-wrap {
+    transform: scale(0.8);
+    transition: ease .5s; }
+
+.portfolio-section .filled-button .fa-long-arrow-alt-right {
+  font-size: .9em;
+  padding: 0 0 0 .6em; }
