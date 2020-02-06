@@ -23,8 +23,7 @@ $(document).ready(function() {
         dots: false,
         margin: 10
     });
-});
-$(window).on("load", function () {
+
     //анимация
     wow = new WOW(
         {
