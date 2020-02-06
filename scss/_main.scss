@@ -1,0 +1,93 @@
+.main-banner-img-wrapper {
+  padding: 45px;
+}
+
+.title-section {
+  padding: 106px 0 10px;
+}
+
+.filled-button {
+  border: 1px solid $hover-text-and-button-header-color;
+  background-color: $hover-text-and-button-header-color;
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.about-section {
+  padding: 60px 0;
+  background-color: $background-sections-color;
+  .btn {
+    margin-top: 30px;
+  }
+}
+
+.help-section {
+  background-image: url("../img/blue_img-2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 70px 0;
+}
+
+.help-caption {
+  margin-bottom: 20px;
+}
+
+.help-text-wrapper {
+  padding: 0 50px;
+}
+
+.services-section {
+  padding: 75px 0;
+}
+
+.services-item {
+  padding: 20px;
+  display: flex;
+}
+
+.services-description-caption {
+  margin-bottom: 25px;
+}
+
+.services-item-icon-wrapper {
+  i {
+    font-size: 50px;
+    color: #379BB9;
+    text-shadow: 0 0 15px rgba(48, 40, 185, 0.47);
+  }
+}
+
+.services-description-wrapper {
+  margin-left: 20px;
+}
+
+.clients-section {
+  padding: 75px 0;
+  background-color: $background-sections-color;
+  .clients-carousel-wrap {
+    .owl-prev, .owl-next {
+      height: 1rem;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      &:before {
+        display: inline-block;
+        font-family: 'FontAwesome';
+        position: absolute;
+        transform: translate(-50%,-50%);
+      }
+    }
+    .owl-prev {
+      &:before {
+        content: "\f053";
+      }
+    }
+    .owl-next {
+      &:before {
+        content: "\f054";
+      }
+    }
+  }
+}

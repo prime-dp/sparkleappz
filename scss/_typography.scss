@@ -1,0 +1,106 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.top-nav-wrap {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-item-link {
+  color: $nav-font-color;
+  transition: $sub-menu-transition;
+}
+
+.nav-item:hover .nav-item-link {
+  transition: $sub-menu-transition;
+  color: $hover-text-and-button-header-color;
+  text-shadow: 0 0 1px #379BB9;
+}
+
+.header-buttons-wrapper {
+  .transparent-button {
+    color: $hover-text-and-button-header-color;
+    &:last-of-type {
+      color: $call-button-color;
+    }
+  }
+}
+
+.transparent-button {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.title-caption-1 {
+  font-size: 2.8rem;
+}
+
+.title-caption-2 {
+  font-size: 3.5rem;
+}
+
+.about-section {
+  .btn {
+    color: white;
+    padding: 10px 40px;
+    &:hover {
+      color: $hover-text-and-button-header-color;
+      box-shadow: 0 0 30px -8px rgba(0,0,0,.4);
+    }
+  }
+}
+
+.about-text {
+  font-weight: 400;
+}
+
+.help-caption {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.help-section {
+  color: white;
+}
+
+.sub-menu-wrap {
+  text-transform: initial;
+  white-space: nowrap;
+}
+
+.sub-menu-link {
+  line-height: 1;
+  font-weight: 400;
+  font-size: .9rem;
+  color: $nav-font-color;
+  transition: $header-hover-transition;
+  border-bottom: 1px solid #e0e0e0;
+  &:hover {
+    color: $hover-text-and-button-header-color;
+    transition: $header-hover-transition;
+    background-color: rgba(89, 141, 255, .1);
+  }
+}
+
+.another-text-color {
+  color: $hover-text-and-button-header-color;
+}
+
+.title-caption-3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.services-description-caption {
+  font-size: 1.4rem;
+}
