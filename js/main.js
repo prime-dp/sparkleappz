@@ -56,7 +56,7 @@ $(document).ready(function() {
 
     $('#contacts-form').submit(function(event){
         $('.form-control').removeClass('invalid-input');
-        if(mailInput.val() != '' || nameInput.val() != '' || textInput.val() != ''){
+        if(mailInput.val() == '' || nameInput.val() == '' || textInput.val() == '' || mailInput.val().search(pattern) != 0){
             if(mailInput.val().search(pattern) == 0){
                 //alert("алё");
                 mailInput.removeClass('invalid-input');
@@ -65,19 +65,17 @@ $(document).ready(function() {
                 mailInput.addClass('invalid-input');
             }
             if(nameInput.val() != ''){
-                $(this).removeClass('invalid-input');
+                $(nameInput).removeClass('invalid-input');
             }else {
-                $(this).addClass('invalid-input');
+                $(nameInput).addClass('invalid-input');
             }
             if(textInput.val() != ''){
-                $(this).removeClass('invalid-input');
+                $(textInput).removeClass('invalid-input');
             }else {
-                $(this).addClass('invalid-input');
+                $(textInput).addClass('invalid-input');
             }
         }else{
 
-            //alert("пусто");
-            $('.form-control').addClass('invalid-input');
         }
         event.preventDefault();
     });
