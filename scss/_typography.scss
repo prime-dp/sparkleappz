@@ -26,10 +26,13 @@ a:hover {
   text-shadow: 0 0 1px #379BB9;
 }
 
+.transparent-button {
+  color: $hover-text-and-button-header-color;
+}
+
 .header-buttons-wrapper {
   .transparent-button {
-    color: $hover-text-and-button-header-color;
-    &:last-of-type {
+    &:last-child {
       color: $call-button-color;
     }
   }

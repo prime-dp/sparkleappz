@@ -29,19 +29,24 @@
 
 .transparent-button {
   border: 2px solid $hover-text-and-button-header-color;
-  &:last-of-type {
-    border: 2px solid $call-button-color;
-  }
   &:hover {
     background-color: $hover-text-and-button-header-color;
     color: white;
-    &:last-of-type {
-      background-color: $call-button-color;
-    }
   }
 }
 
 .header-buttons-wrapper {
+  .transparent-button {
+    &:last-child {
+      border: 2px solid $call-button-color;
+    }
+    &:hover {
+      &:last-child {
+        background-color: $call-button-color;
+        color: white;
+      }
+    }
+  }
   .fa-phone {
     font-size: 14px;
     margin-left: 5px;
