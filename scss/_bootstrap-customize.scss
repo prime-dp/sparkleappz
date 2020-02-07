@@ -8,4 +8,7 @@
 
 .btn {
   border-radius: 100px;
+  &:focus {
+    box-shadow: none;
+  }
 }

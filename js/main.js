@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     });
 
-    $(".owl-carousel").owlCarousel({
+    $('.owl-carousel').owlCarousel({
         items: 5,
         //nav: true,
         autoplay: true,
@@ -52,37 +52,46 @@ $(document).ready(function() {
     let pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i,
         mailInput = $('#input-email'),
         nameInput = $('#input-name'),
+        skypeInput = $('#input-skype'),
+        telInput = $('#phone'),
         textInput = $('#input-message');
 
     $('#contacts-form').submit(function(event){
+        console.log(telInput.val().length);
         $('.form-control').removeClass('invalid-input');
-        if(mailInput.val() == '' || nameInput.val() == '' || textInput.val() == '' || mailInput.val().search(pattern) != 0){
-            if(mailInput.val().search(pattern) == 0){
+        if(mailInput.val() === '' || skypeInput.val() === '' || nameInput.val() === '' || textInput.val() === '' || mailInput.val().search(pattern) !== 0){
+            if(mailInput.val().search(pattern) === 0){
                 //alert("алё");
                 mailInput.removeClass('invalid-input');
             }else{
                 //alert("не алё");
                 mailInput.addClass('invalid-input');
             }
-            if(nameInput.val() != ''){
+            if(nameInput.val() !== ''){
                 $(nameInput).removeClass('invalid-input');
             }else {
                 $(nameInput).addClass('invalid-input');
             }
-            if(textInput.val() != ''){
+            if(textInput.val() !== ''){
                 $(textInput).removeClass('invalid-input');
             }else {
                 $(textInput).addClass('invalid-input');
+            }
+            if(skypeInput.val() !== ''){
+                $(skypeInput).removeClass('invalid-input');
+            }else {
+                $(skypeInput).addClass('invalid-input');
+            }
+            if(telInput.val() !== '' && telInput.val().length === 17){
+                $(telInput).removeClass('invalid-input');
+            }else {
+                $(telInput).addClass('invalid-input');
             }
         }else{
 
         }
         event.preventDefault();
     });
-
-    //phone mask
-
-    //$("#input-phone").mask("+3 (000) 000-0000");
 
 
     //scrollspy
@@ -137,4 +146,5 @@ $(document).ready(function() {
     //         $(document).on("scroll", Scroll_block);
     //     });
     // });
+
 });
