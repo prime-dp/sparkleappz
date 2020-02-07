@@ -16,7 +16,7 @@ a:hover {
 }
 
 .nav-item-link {
-  color: $nav-font-color;
+  color: $main-font-color;
   transition: $sub-menu-transition;
 }
 
@@ -80,7 +80,7 @@ a:hover {
   line-height: 1;
   font-weight: 400;
   font-size: .9rem;
-  color: $nav-font-color;
+  color: $main-font-color;
   transition: $header-hover-transition;
   border-bottom: 1px solid #e0e0e0;
   &:hover {
@@ -107,4 +107,42 @@ a:hover {
 .portfolio-item-caption {
   font-weight: 600;
   font-size: 1.2rem;
+}
+
+.footer-wrap {
+  font-size: .8rem;
+}
+
+.footer-list-title {
+  font-size: 1.2rem;
+}
+
+.footer-link {
+  color: $main-font-color;
+  i {
+    padding-right: .4rem;
+    color: $hover-text-and-button-header-color;
+  }
+  &:hover {
+    color: $hover-text-and-button-header-color;
+  }
+}
+
+.footer-contacts {
+  color: $main-font-color;
+  font-size: 1rem;
+  &:hover {
+    color: inherit;
+  }
+  i {
+    margin-right: .5em;
+    color: $hover-text-and-button-header-color;
+    font-size: 1.2rem;
+  }
+}
+
+.contacts-section {
+  .title-caption-3 {
+    color: white;
+  }
 }

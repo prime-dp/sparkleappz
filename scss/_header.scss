@@ -21,20 +21,21 @@
   }
 }
 
-.header-buttons-wrapper {
-  .transparent-button {
-    border: 2px solid $hover-text-and-button-header-color;
+.transparent-button {
+  border: 2px solid $hover-text-and-button-header-color;
+  &:last-of-type {
+    border: 2px solid $call-button-color;
+  }
+  &:hover {
+    background-color: $hover-text-and-button-header-color;
+    color: white;
     &:last-of-type {
-      border: 2px solid $call-button-color;
-    }
-    &:hover {
-      background-color: $hover-text-and-button-header-color;
-      color: white;
-      &:last-of-type {
-        background-color: $call-button-color;
-      }
+      background-color: $call-button-color;
     }
   }
+}
+
+.header-buttons-wrapper {
   .fa-phone {
     font-size: 14px;
     margin-left: 5px;
@@ -43,7 +44,7 @@
 
 .sub-menu {
   border-radius: 5px;
-  border: 1px solid $nav-font-color;
+  border: 1px solid $main-font-color;
   &:after {
     display: block;
     z-index: -1;

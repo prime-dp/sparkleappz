@@ -35,7 +35,7 @@
   padding: 0 50px;
 }
 
-.services-section, .portfolio-section, .clients-section {
+.services-section, .portfolio-section, .clients-section, .contacts-section {
   padding: 75px 0;
 }
 
@@ -101,6 +101,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    cursor: pointer;
     &:hover {
       .portfolio-item-caption {
         opacity: 1;
@@ -123,5 +124,42 @@
       font-size: .9em;
       padding: 0 0 0 .6em;
     }
+  }
+}
+
+.contacts-section {
+  background-color: $contacts-section-bg-color;
+  .form-wrap {
+    padding: 20px;
+    background-color: white;
+    box-shadow: $contacts-box-shadow;
+  }
+  .form-control {
+    height: 3rem;
+    &::placeholder {
+      font-size: .8rem;
+      font-weight: 500;
+    }
+  }
+  #input-message {
+    height: 8rem;
+    resize: none;
+  }
+  .transparent-button {
+    padding: 6px 40px;
+    border-color: $hover-text-and-button-header-color;
+    color: $hover-text-and-button-header-color;
+    &:hover {
+      background-color: $hover-text-and-button-header-color;
+      color: white;
+    }
+  }
+  .map-wrap {
+    height: 100%;
+    box-shadow: $contacts-box-shadow;
+    background-color: white;
+  }
+  .invalid-input {
+    box-shadow: 0 0 0 .1rem rgba(255, 0, 2, 0.5);
   }
 }
