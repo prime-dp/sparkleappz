@@ -17,7 +17,7 @@
 }
 
 .nav-item {
-  margin: 8px 14px;
+  margin: 8px 10px;
   cursor: pointer;
   &:hover .sub-menu-wrap {
     transition: $sub-menu-transition;
@@ -48,7 +48,7 @@
     }
   }
   .fa-phone {
-    font-size: 14px;
+    font-size: .9rem;
     margin-left: 5px;
   }
 }

@@ -1,5 +1,6 @@
 html {
   font-size: 16px;
+  color: $main-font-color;
 }
 
 body {
@@ -10,20 +11,11 @@ a:hover {
   text-decoration: none;
 }
 
-.top-nav-wrap {
+.nav-item-link {
   font-weight: 600;
   font-size: 1rem;
-}
-
-.nav-item-link {
   color: $main-font-color;
   transition: $sub-menu-transition;
-}
-
-.nav-item:hover .nav-item-link {
-  transition: $sub-menu-transition;
-  color: $hover-text-and-button-header-color;
-  text-shadow: 0 0 1px #379BB9;
 }
 
 .transparent-button {
@@ -81,7 +73,7 @@ a:hover {
 
 .sub-menu-link {
   line-height: 1;
-  font-weight: 400;
+  font-weight: 500;
   font-size: .9rem;
   color: $main-font-color;
   transition: $header-hover-transition;
@@ -148,4 +140,42 @@ a:hover {
   .title-caption-3 {
     color: white;
   }
+}
+
+.process-item-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.process-item-number {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.team-item-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.team-item-description {
+  font-size: .9rem;
+}
+
+.industries-item-title {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.sub-title {
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.client-name {
+  font-weight: 600;
+}
+
+.section-subtitles {
+  font-size: .7rem;
 }

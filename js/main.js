@@ -1,27 +1,37 @@
 $(document).ready(function() {
 
-    //шапка
-    $(window).scroll(function () {
-
-        let wScroll = $(this).scrollTop();
-
-        if (wScroll > 30) {
-            $('.header-wrapper').addClass('header-active');
-        } else {
-            $('.header-wrapper').removeClass('header-active');
-        }
-
-    });
-
-    $('.owl-carousel').owlCarousel({
-        items: 5,
-        //nav: true,
+    $('.first-slider').owlCarousel({
+        items: 1,
         autoplay: true,
         loop: true,
         navText : ["",""],
-        //navContainer: '.clients-carousel-wrap',
-        dots: false
-        //margin: 10
+        dots: true,
+        responsiveClass: true,
+        center: true,
+        responsive : {
+            992 : {
+                items: 5
+            }
+        }
+    });
+
+    $('#second-slider').owlCarousel({
+        items: 1,
+        autoplay: true,
+        loop: true,
+        navText : ["",""],
+        dots: true,
+        responsiveClass: true,
+        center: true,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        touchDrag: false,
+        mouseDrag: false
+    });
+
+    $('.carousel').carousel({
+        interval: 2500,
+        pause: false
     });
 
     //анимация
@@ -38,7 +48,7 @@ $(document).ready(function() {
     owl.owlCarousel();
     $('.customNextBtn').click(function() {
         owl.trigger('next.owl.carousel');
-    })
+    });
     // Go to the previous item
     $('.customPrevBtn').click(function() {
         // With optional speed parameter
@@ -93,6 +103,82 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
+    if ($(window).width() < 992) {
+
+        //footer-links
+
+        $('#important-list-title').click(function () {
+            $('#important-list-links').toggleClass('show-list');
+            $('#important-list-arrow').toggleClass('arrow-transform');
+        });
+        $('#useful-links-title').click(function () {
+            $('#useful-links-list').toggleClass('show-list');
+            $('#userful-list-arrow').toggleClass('arrow-transform');
+        });
+        $('#nav-icon3').click(function () {
+            $(this).toggleClass('open');
+            $('.top-nav-wrap').toggleClass('open-menu');
+            $('body').toggleClass('overflow-hidden');
+        });
+        //ios menu scroll
+        var FenixUI = {
+            overlayModalIos : function($block) {
+                var _overlay = document.getElementById($block);
+                var _clientY = null; // remember Y position on touch start
+
+                if(!_overlay) {
+                    return '';
+                }
+
+                _overlay.addEventListener('touchstart', function(event) {
+                    if(event.targetTouches.length === 1) {
+                        // detect single touch
+                        _clientY = event.targetTouches[0].clientY;
+                    }
+                }, false);
+
+                _overlay.addEventListener('touchmove', function(event) {
+                    if(event.targetTouches.length === 1) {
+                        // detect single touch
+                        disableRubberBand(event);
+                    }
+                }, false);
+
+                function disableRubberBand(event) {
+                    var clientY = event.targetTouches[0].clientY - _clientY;
+
+                    if(_overlay.scrollTop === 0 && clientY > 0) {
+                        // element is at the top of its scroll
+                        event.preventDefault();
+                    }
+
+                    if(isOverlayTotallyScrolled() && clientY < 0) {
+                        //element is at the top of its scroll
+                        event.preventDefault();
+                    }
+                }
+
+                function isOverlayTotallyScrolled() {
+                    // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight#Problems_and_solutions
+                    return _overlay.scrollHeight - _overlay.scrollTop <= _overlay.clientHeight;
+                }
+            }
+        };
+
+        FenixUI.overlayModalIos('mobile-menu');
+    } else {
+        //шапка
+        $(window).scroll(function () {
+
+            let wScroll = $(this).scrollTop();
+
+            if (wScroll > 30) {
+                $('.header-wrapper').addClass('header-active');
+            } else {
+                $('.header-wrapper').removeClass('header-active');
+            }
+        });
+    }
 
     //scrollspy
 
