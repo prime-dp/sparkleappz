@@ -120,7 +120,7 @@ a:hover {
 .title-caption-3 {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 40px; }
+  margin-bottom: 30px; }
 
 .services-description-caption {
   font-size: 1.4rem; }
@@ -185,6 +185,22 @@ a:hover {
 
 .section-subtitles {
   font-size: .7rem; }
+
+.title-post {
+  color: white; }
+
+.title-post-caption {
+  font-size: 1.6rem; }
+
+.title-post-date, .title-post-comments {
+  font-size: .8rem;
+  font-weight: 300; }
+
+.title-post-text {
+  font-weight: 300; }
+
+.blog-content-item-2-wrap .title-post-wrap {
+  color: #000; }
 
 .header-wrapper {
   padding: 15px 0;
@@ -285,7 +301,7 @@ a:hover {
 .help-text-wrapper {
   padding: 0 50px; }
 
-.top-block-wrap, .reviews-section, .industries-section, .technologies-section, .team-section, .services-section, .portfolio-section, .clients-section, .contacts-section, .process-block-wrap {
+.blog-content-section, .blog-section, .top-block-wrap, .reviews-section, .industries-section, .technologies-section, .team-section, .services-section, .portfolio-section, .clients-section, .contacts-section, .process-block-wrap {
   padding: 75px 0; }
 
 .services-item {
@@ -502,6 +518,50 @@ a:hover {
     width: .7rem;
     height: .7rem; }
 
+.blog-content-section .blog-content-item-wrap {
+  overflow: hidden;
+  display: inline-block; }
+  .blog-content-section .blog-content-item-wrap:before {
+    z-index: 1;
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.64); }
+  .blog-content-section .blog-content-item-wrap img {
+    transform: scale(1);
+    transition: ease 0.5s; }
+  .blog-content-section .blog-content-item-wrap .title-post-wrap {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: ease 0.5s; }
+
+.blog-content-section .filled-button {
+  background-color: rgba(0, 0, 0, 0.54);
+  border-color: rgba(255, 255, 255, 0.24);
+  margin-top: 0; }
+
+.blog-content-section .title-post-text {
+  display: block;
+  overflow: hidden;
+  transition: ease 0.5s; }
+
+.blog-content-section .blog-content-item-2-wrap .title-post-wrap {
+  max-width: 100%;
+  background-color: #ebefe6;
+  padding: 20px; }
+
+.blog-content-section .blog-content-item-2-wrap .title-post-text {
+  max-height: initial; }
+
+.blog-content-section .blog-section-margin, .blog-content-section .blog-item-margin-top-mobile {
+  margin-top: 90px; }
+
 .footer-wrap {
   padding: 75px 0 60px;
   background-color: #ebefe6; }
@@ -686,7 +746,17 @@ a:hover {
   #nav-icon3.open span:nth-child(4) {
     top: 18px;
     width: 0;
-    left: 50%; } }
+    left: 50%; }
+  .title-post-caption {
+    font-size: 1rem; }
+  .blog-content-section .title-post-text {
+    display: none; }
+  .blog-content-section .title-post-wrap {
+    width: 100%; }
+  .blog-content-item-2-wrap .title-post-text {
+    display: block; }
+  .blog-content-item-2-wrap .title-post-wrap {
+    width: 100%; } }
 
 @media screen and (min-width: 992px) {
   .portfolio-section .portfolio-item-wrap:hover .portfolio-item-caption {
@@ -701,4 +771,29 @@ a:hover {
   .nav-item:hover .nav-item-link {
     transition: ease 0.2s;
     color: #0057ff;
-    text-shadow: 0 0 1px #379BB9; } }
+    text-shadow: 0 0 1px #379BB9; }
+  .blog-content-section .blog-content-item-wrap:hover .title-post-text {
+    max-height: 120px;
+    transition: ease 0.5s; }
+  .blog-content-section .blog-content-item-wrap:hover img {
+    transform: scale(1.2);
+    transition: ease 0.5s; }
+  .blog-content-section .blog-content-item-wrap:hover .title-post-wrap {
+    transition: ease 0.5s; }
+  .blog-content-section .filled-button:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8); }
+  .blog-content-section .title-post-wrap {
+    max-width: 50%; }
+  .blog-content-section .title-post-text {
+    max-height: 0; }
+  .blog-content-section .blog-content-item-2-wrap {
+    transition: ease 0.5s; }
+    .blog-content-section .blog-content-item-2-wrap:hover {
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.75);
+      transform: scale(1.01);
+      transition: ease 0.5s; }
+  .blog-content-section .blog-item-margin-top-mobile {
+    margin-top: 0; }
+  .navbar-nav .nav-item-link:hover, .navbar-nav .active {
+    color: #0057ff; } }

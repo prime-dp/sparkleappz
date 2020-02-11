@@ -35,7 +35,7 @@
   padding: 0 50px;
 }
 
-.top-block-wrap, .reviews-section, .industries-section, .technologies-section, .team-section, .services-section, .portfolio-section, .clients-section, .contacts-section, .process-block-wrap {
+.blog-content-section,.blog-section,.top-block-wrap, .reviews-section, .industries-section, .technologies-section, .team-section, .services-section, .portfolio-section, .clients-section, .contacts-section, .process-block-wrap {
   padding: 75px 0;
 }
 
@@ -317,5 +317,59 @@
         height: .7rem;
       }
     }
+  }
+}
+.blog-content-section {
+  .blog-content-item-wrap {
+    overflow: hidden;
+    display: inline-block;
+    &:before {
+      z-index: 1;
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, .64);
+    }
+    img {
+      transform: scale(1);
+      transition: $blog-transition;
+    }
+    .title-post-wrap {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 2;
+      transition: $blog-transition;
+
+    }
+  }
+  .filled-button {
+    background-color: rgba(0, 0, 0, .54);
+    border-color: rgba(255, 255, 255, .24);
+    margin-top: 0;
+  }
+  .title-post-text {
+    display: block;
+    overflow: hidden;
+    transition: $blog-transition;
+
+  }
+  .blog-content-item-2-wrap {
+    //margin: 0 30px;
+    .title-post-wrap {
+      max-width: 100%;
+      background-color: $background-sections-color;
+      padding: 20px;
+    }
+    .title-post-text {
+      max-height: initial;
+    }
+  }
+  .blog-section-margin,.blog-item-margin-top-mobile {
+    margin-top: 90px;
   }
 }
